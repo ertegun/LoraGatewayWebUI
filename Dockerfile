@@ -1,4 +1,5 @@
 FROM node:lts-alpine
+ENV TZ="Asia/Istanbul"
 WORKDIR /lgw
 COPY . .
 # RUN npm i -g @vue/cli

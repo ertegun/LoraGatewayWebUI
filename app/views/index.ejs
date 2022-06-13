@@ -3,37 +3,46 @@
     <div class="col s12 m6 offset-m3">
       <h3 class="header">OS Info</h3>
       <div class="collection">
-        <a href="#!" class="collection-item"><span class="badge">
+        <p class="collection-item teal-text darken-4"><span class="badge">
             <%= hostName %>
-          </span>Host Name</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Host Name</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
             <%= model %>
-          </span>Model</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Model</p>
+        <p class="collection-item  teal-text darken-4"><span class="badge">
             <%= arch %>
-          </span>Arch</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Arch</p>
+        <p class="collection-item  teal-text darken-4"><span class="badge">
             <%= firmwareVersion %>
-          </span>Firmware Version</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Firmware Version</p>
+        <p class="collection-item  teal-text darken-4"><span class="badge">
             <%= kernelVersion %>
-          </span>Kernel Version</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Kernel Version</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
             <%= localTime %>
-          </span>Local Time</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Local Time</p>
+        <p class="collection-item  teal-text darken-4"><span class="badge">
             <%= upTime %>
-          </span>Up Time</a>
-        <a href="#!" class="collection-item"><span class="badge">
+          </span>Up Time</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
             <%= nodeJSVersion %>
-          </span>Node JS Version</a>
+          </span>Node JS Version</p>
 
       </div>
       <h3 class="header">Memory Status</h3>
       <div class="collection">
-        <a href="#!" class="collection-item"><span class="badge">1</span>Total Available</a>
-        <a href="#!" class="collection-item"><span class="badge">4</span>Used</a>
-        <a href="#!" class="collection-item"><span class="badge">4</span>Buffered</a>
+        <p class="collection-item teal-text darken-4"><span class="badge">
+            <%= (totalMemory/(1024*1024)).toFixed(2) %> MB
+          </span>Total</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
+            <%= (availableMemory/(1024*1024)).toFixed(2) %> MB
+          </span>Available</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
+            <%= (usedMemory/(1024*1024)).toFixed(2) %> MB
+          </span>Used</p>
+        <p class="collection-item teal-text darken-4"><span class="badge">
+            <%= (bufferedMemory/(1024*1024)).toFixed(2) %> MB
+          </span>Buffered</p>
       </div>
     </div>
   </div>
