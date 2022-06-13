@@ -1,0 +1,41 @@
+<% include layouts/header.ejs %>
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <h3 class="header">OS Info</h3>
+      <div class="collection">
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= hostName %>
+          </span>Host Name</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= model %>
+          </span>Model</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= arch %>
+          </span>Arch</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= firmwareVersion %>
+          </span>Firmware Version</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= kernelVersion %>
+          </span>Kernel Version</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= localTime %>
+          </span>Local Time</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= upTime %>
+          </span>Up Time</a>
+        <a href="#!" class="collection-item"><span class="badge">
+            <%= nodeJSVersion %>
+          </span>Node JS Version</a>
+
+      </div>
+      <h3 class="header">Memory Status</h3>
+      <div class="collection">
+        <a href="#!" class="collection-item"><span class="badge">1</span>Total Available</a>
+        <a href="#!" class="collection-item"><span class="badge">4</span>Used</a>
+        <a href="#!" class="collection-item"><span class="badge">4</span>Buffered</a>
+      </div>
+    </div>
+  </div>
+
+  <% include layouts/footer.ejs %>
