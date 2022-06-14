@@ -22,6 +22,7 @@ router.get("/", function (req, res) {
     availableMemory: "",
     usedMemory: "",
     bufferedMemory: "",
+    networkStatus: "",
   };
   try {
     data.hostName = shell.exec("uname -n", { silent: true }).stdout;
@@ -63,6 +64,9 @@ router.get("/", function (req, res) {
       `free | awk '{print $6}' | head -n 2 | tail -n 1`,
       { silent: true }
     ).stdout;
+    data.networkStatus = shell.exec(`mwan3 status | grep interface Ifconfig`, {
+      silent: true,
+    }).stdout;
   } catch (error) {
     console.log(error);
   }

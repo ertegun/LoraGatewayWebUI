@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  express:
+    build: .
+      # context: './apache/'
+      #args:
+       #APACHE_VERSION: ${APACHE_VERSION}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/lgw
+    environment:
+      TZ: Asia/Istanbul  
+    container_name: lorawangateway
